@@ -1,0 +1,5 @@
+# Ignore test files
+test*.*
+
+# Ignore all css within sass directories
+*/scss/*.css

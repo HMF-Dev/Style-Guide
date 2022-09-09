@@ -1,0 +1,1 @@
+# Senneca Standard Styles

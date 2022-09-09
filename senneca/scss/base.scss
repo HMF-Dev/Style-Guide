@@ -1,0 +1,17 @@
+@use "sass:map";
+
+@use 'color';
+@use 'font';
+
+.h1 {
+    color: color.$blue-dark;
+    font-size: map.get(font.$size, "lg");
+}
+
+.h2, .h3, .h4 {
+    color: color.$grey-dark;
+}
+
+
+
+
