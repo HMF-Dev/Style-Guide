@@ -2,19 +2,38 @@
 
 @use 'abstracts/colors' as clr;
 @use 'abstracts/fonts' as fnt;
+
 @use 'components/containers' as cont;
 @use 'components/tables' as tbl;
 
+@use 'animations/translate' as trn;
+@use 'animations/rotate' as rt;
+@use 'animations/base' as b;
 
 
-div {
-    border: black solid 3px;
-
-    @include cont.rounded(cont.$radius);
-
+:root {
+    --rt-deg: 90deg; 
 }
 
+#div_1 {
+    background: clr.$grey;
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 400px;
+}
+
+
+
+p {
+    display: block;
+    position: absolute;
+}
+
+
 table {
+
+
     thead {
         background: clr.$grey-dark;
         color: white;
@@ -23,6 +42,8 @@ table {
             padding: 5px;
         }
     }
+
+
     @include tbl.table-body(rgba(clr.$blue, 0.5), rgba(clr.$grey-dark, 0.5));
 
     text-align: center;
@@ -47,4 +68,45 @@ tbody tr {
 
 
 
+
+
+
+
+// Rotation animations
+.spinning-left {
+    @include rt.spinning-left();
+}
+.spinning-right {
+    @include rt.spinning-right();
+}
+
+
+
+.rotate-left-90 {
+    @include rt.rotate-left-90();
+}
+.rotate-left-180 {
+    @include rt.rotate-left-180();
+}
+.rotate-left-270 {
+    @include rt.rotate-left-270();
+}
+.rotate-left-360 {
+    @include rt.rotate-left-360();
+}
+
+
+
+.rotate-right-90 {
+    @include rt.rotate-right-90();
+}
+.rotate-right-180 {
+    @include rt.rotate-right-180();
+}
+.rotate-right-270 {
+    @include rt.rotate-right-270();
+}
+.rotate-right-360 {
+    @include rt.rotate-right-360();
+}
 
