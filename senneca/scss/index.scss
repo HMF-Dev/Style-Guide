@@ -8,6 +8,7 @@
 
 @use 'animations/translate' as trn;
 @use 'animations/rotate' as rt;
+@use 'animations/scale' as scl;
 @use 'animations/base' as b;
 
 
@@ -43,8 +44,11 @@ table {
         }
     }
 
-
-    @include tbl.table-body(rgba(clr.$blue, 0.5), rgba(clr.$grey-dark, 0.5));
+    input {
+        background: inherit;
+        color: inherit;
+    }
+    @include tbl.table-body(clr.$odd-row, clr.$even-row, clr.$blue);
 
     text-align: center;
 }
@@ -110,3 +114,7 @@ tbody tr {
     @include rt.rotate-right-360();
 }
 
+// Scale animations
+.pulse-20 {
+    @include scl.pulse-20();
+}

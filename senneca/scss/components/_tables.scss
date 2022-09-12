@@ -1,6 +1,6 @@
 
 
-@mixin table-body($color-even-row, $color-odd-row) {
+@mixin table-body($color-even-row, $color-odd-row, $color-active-row) {
     
     tbody {
 
@@ -18,19 +18,19 @@
 
         //active
         tr:nth-child(odd).active {
-            background: rgba($color-odd-row, 0.1) !important;
+            background: rgba($color-active-row, 0.1) !important;
         };
 
         tr:nth-child(even).active {
-            background: rgba($color-even-row, 0.1) !important;
+            background: rgba($color-active-row, 0.1) !important;
         };
 
         tr:nth-child(odd):hover {
-            background: rgba($color-odd-row, 0.25);
+            background: rgba($color-active-row, 0.25);
         };
 
         tr:nth-child(even):hover {
-            background: rgba($color-even-row, 0.25);
+            background: rgba($color-active-row, 0.25);
         };
     
 

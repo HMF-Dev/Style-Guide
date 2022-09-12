@@ -238,6 +238,39 @@
     rotate: 360deg;
   }
 }
+@-webkit-keyframes pulse-20 {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    rotate: 1;
+  }
+}
+@-moz-keyframes pulse-20 {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    rotate: 1;
+  }
+}
+@keyframes pulse-20 {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    rotate: 1;
+  }
+}
 :root {
   --rt-deg: 90deg;
 }
@@ -265,20 +298,24 @@ table thead {
 table thead th {
   padding: 5px;
 }
+table input {
+  background: inherit;
+  color: inherit;
+}
 table tbody tr:nth-child(odd) {
-  background: rgba(45, 45, 45, 0.5);
+  background: #b7b7b9;
 }
 table tbody tr:nth-child(even) {
-  background: rgba(15, 143, 206, 0.5);
+  background: #dfe1e6;
 }
 table tbody tr:nth-child(odd).active {
-  background: rgba(45, 45, 45, 0.1) !important;
+  background: rgba(15, 143, 206, 0.1) !important;
 }
 table tbody tr:nth-child(even).active {
   background: rgba(15, 143, 206, 0.1) !important;
 }
 table tbody tr:nth-child(odd):hover {
-  background: rgba(45, 45, 45, 0.25);
+  background: rgba(15, 143, 206, 0.25);
 }
 table tbody tr:nth-child(even):hover {
   background: rgba(15, 143, 206, 0.25);
@@ -360,6 +397,12 @@ tbody tr {
   -moz-animation: r-r360 2s forwards;
   -webkit-animation: r-r360 2s forwards;
   animation: r-r360 2s forwards;
+}
+
+.pulse-20 {
+  -moz-animation: pulse-20 3s linear infinite;
+  -webkit-animation: pulse-20 3s linear infinite;
+  animation: pulse-20 3s linear infinite;
 }
 
 /*# sourceMappingURL=index.css.map */
