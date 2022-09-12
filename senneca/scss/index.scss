@@ -1,0 +1,50 @@
+@use "sass:map";
+
+@use 'abstracts/colors' as clr;
+@use 'abstracts/fonts' as fnt;
+@use 'components/containers' as cont;
+@use 'components/tables' as tbl;
+
+
+
+div {
+    border: black solid 3px;
+
+    @include cont.rounded(cont.$radius);
+
+}
+
+table {
+    thead {
+        background: clr.$grey-dark;
+        color: white;
+        
+        th {
+            padding: 5px;
+        }
+    }
+    @include tbl.table-body(rgba(clr.$blue, 0.5), rgba(clr.$grey-dark, 0.5));
+
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody tr {
+    border-top: 1px solid clr.$grey-dark;
+    border-bottom: 1px solid clr.$grey-dark;
+}
+.h1 {
+    color: clr.$blue-dark;
+    font-size: map.get(fnt.$size, "lg");
+}
+
+.h2, .h3, .h4 {
+    color: clr.$grey-dark;
+}
+
+
+
+

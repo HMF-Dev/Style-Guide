@@ -1,0 +1,39 @@
+
+
+@mixin table-body($color-even-row, $color-odd-row) {
+    
+    tbody {
+
+        //base
+        tr:nth-child(odd) {
+            background: $color-odd-row;
+    
+        };
+
+        tr:nth-child(even) {
+            background: $color-even-row;
+        };
+        ///end base///
+
+
+        //active
+        tr:nth-child(odd).active {
+            background: rgba($color-odd-row, 0.1) !important;
+        };
+
+        tr:nth-child(even).active {
+            background: rgba($color-even-row, 0.1) !important;
+        };
+
+        tr:nth-child(odd):hover {
+            background: rgba($color-odd-row, 0.25);
+        };
+
+        tr:nth-child(even):hover {
+            background: rgba($color-even-row, 0.25);
+        };
+    
+
+    };
+
+}

@@ -1,3 +1,46 @@
+div {
+  border: black solid 3px;
+  border-radius: 1.6em;
+}
+
+table {
+  text-align: center;
+}
+table thead {
+  background: #2d2d2d;
+  color: white;
+}
+table thead th {
+  padding: 5px;
+}
+table tbody tr:nth-child(odd) {
+  background: rgba(45, 45, 45, 0.5);
+}
+table tbody tr:nth-child(even) {
+  background: rgba(15, 143, 206, 0.5);
+}
+table tbody tr:nth-child(odd).active {
+  background: rgba(45, 45, 45, 0.1) !important;
+}
+table tbody tr:nth-child(even).active {
+  background: rgba(15, 143, 206, 0.1) !important;
+}
+table tbody tr:nth-child(odd):hover {
+  background: rgba(45, 45, 45, 0.25);
+}
+table tbody tr:nth-child(even):hover {
+  background: rgba(15, 143, 206, 0.25);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tbody tr {
+  border-top: 1px solid #2d2d2d;
+  border-bottom: 1px solid #2d2d2d;
+}
+
 .h1 {
   color: #0070ba;
   font-size: 50px;

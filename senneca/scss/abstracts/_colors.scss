@@ -6,6 +6,7 @@ $blue-dark: #0070ba; //rgba(0,112,186,255)
 $grey-light: #b4b4b6; //rgba(180,180,182,255)
 $grey: #5e6266; //rgba(94,98,102,255)
 $grey-dark: #2d2d2d; //rgba(45,45,45,255)
-
-
-
+    //gradients
+@mixin blue-grad {
+    background: -webkit-linear-gradient(240deg, rgba($blue, .60), rgba($grey-light, .8));
+}
