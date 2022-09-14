@@ -1,6 +1,1 @@
-$radius: 1.6em;
-
-
-@mixin rounded($radius) {
-    border-radius: $radius;
-}
+@use '../../../general/scss/components/containers' as g-containers;

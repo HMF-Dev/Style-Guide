@@ -1,118 +1,41 @@
-@use "sass:map";
+@mixin root-base() {
+    :root {
 
-@use 'abstracts/colors' as clr;
-@use 'abstracts/fonts' as fnt;
+        // Alterable Angles 
+        --deg-0: 0deg; 
+        --deg-1: 0deg; 
+        --deg-2: 0deg; 
+        --deg-3: 0deg; 
+        --deg-4: 0deg;
+        --deg-5: 0deg; 
+        --deg-6: 0deg; 
+        --deg-7: 0deg; 
+        --deg-8: 0deg;
+        --deg-9: 0deg;
 
-@use 'components/containers' as cont;
-@use 'components/tables' as tbl;
+        // Alterable Positions (x)
+        --x-pos-0: 0px;
+        --x-pos-1: 0px;
+        --x-pos-2: 0px;
+        --x-pos-3: 0px;
+        --x-pos-4: 0px;
+        --x-pos-5: 0px;
+        --x-pos-6: 0px;
+        --x-pos-7: 0px;
+        --x-pos-8: 0px;
+        --x-pos-9: 0px;
 
-@use 'animations/translate' as trn;
-@use 'animations/rotate' as rt;
-@use 'animations/scale' as scl;
-@use 'animations/base' as b;
+        // Alterable Positions (y)
+        --y-pos-0: 0px;
+        --y-pos-1: 0px;
+        --y-pos-2: 0px;
+        --y-pos-3: 0px;
+        --y-pos-4: 0px;
+        --y-pos-5: 0px;
+        --y-pos-6: 0px;
+        --y-pos-7: 0px;
+        --y-pos-8: 0px;
+        --y-pos-9: 0px;
 
-
-:root {
-    --rt-deg: 90deg; 
-}
-
-
-#div_1 {
-    background: clr.$grey;
-    position: relative;
-    display: block;
-    width: 500px;
-    height: 400px;
-}
-
-
-p {
-    display: block;
-    position: absolute;
-}
-
-
-table {
-
-
-    thead {
-        background: clr.$grey-dark;
-        color: white;
-        
-        th {
-            padding: 5px;
-        }
-    }
-
-    input {
-        background: inherit;
-        color: inherit;
-    }
-    @include tbl.table-body(clr.$odd-row, clr.$even-row, clr.$red-light);
-
-    text-align: center;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-tbody tr {
-    border-top: 1px solid clr.$grey-dark;
-    border-bottom: 1px solid clr.$grey-dark;
-}
-
-
-.h1 {
-    color: clr.$red;
-    font-size: map.get(fnt.$size, "lg");
-}
-
-.h2, .h3, .h4 {
-    color: clr.$grey-dark;
-}
-
-
-
-// Rotation animations
-.spinning-left {
-    @include rt.spinning-left();
-}
-.spinning-right {
-    @include rt.spinning-right();
-}
-
-
-
-.rotate-left-90 {
-    @include rt.rotate-left-90();
-}
-.rotate-left-180 {
-    @include rt.rotate-left-180();
-}
-.rotate-left-270 {
-    @include rt.rotate-left-270();
-}
-.rotate-left-360 {
-    @include rt.rotate-left-360();
-}
-
-
-
-.rotate-right-90 {
-    @include rt.rotate-right-90();
-}
-.rotate-right-180 {
-    @include rt.rotate-right-180();
-}
-.rotate-right-270 {
-    @include rt.rotate-right-270();
-}
-.rotate-right-360 {
-    @include rt.rotate-right-360();
-}
-
-// Scale animations
-.pulse-20 {
-    @include scl.pulse-20();
+    };
 }

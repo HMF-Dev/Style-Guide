@@ -13,6 +13,8 @@
 @use '../../general/scss/animations/rotate' as g-rotate;
 @use '../../general/scss/animations/scale' as g-scale;
 @use '../../general/scss/animations/base' as g-animations-base;
+
+@use '../../general/scss/index' as g-index;
 //-----------------//
 
 // Organization Imports //
@@ -23,15 +25,14 @@
 @use 'components/tables' as o-tables;
 
 @use 'animations/translate' as o-translate;
-@use 'general/scss/animations/rotate' as o-rotate;
-@use 'general/scss/animations/scale' as o-scale;
-@use 'general/scss/animations/base' as o-animations-base;
+@use 'animations/rotate' as o-rotate;
+@use 'animations/scale' as o-scale;
 //----------------------//
 
 
 
 :root {
-    --rt-deg: 90deg; 
+    @include g-index.root-base();
 }
 
 
@@ -66,7 +67,7 @@ table {
         background: inherit;
         color: inherit;
     }
-    @include tbl.table-body(o-colors.$odd-row, o-colors.$even-row, o-colors.$red-light);
+    @include g-tables.table-body(o-colors.$odd-row, o-colors.$even-row, o-colors.$red-light);
 
     text-align: center;
 }

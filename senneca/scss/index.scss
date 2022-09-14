@@ -1,29 +1,48 @@
 @use "sass:map";
 
-@use 'abstracts/colors' as clr;
-@use 'abstracts/fonts' as fnt;
 
-@use 'components/containers' as cont;
-@use 'components/tables' as tbl;
+// General Imports // 
+    // Abstracts
+@use '../../general/scss/abstracts/colors' as g-colors;
+@use '../../general/scss/abstracts/fonts' as g-fonts;
+    // Abstracts
+@use '../../general/scss/components/containers' as g-containers;
+@use '../../general/scss/components/tables' as g-tables;
+    // Animations
+@use '../../general/scss/animations/translate' as g-translate;
+@use '../../general/scss/animations/rotate' as g-rotate;
+@use '../../general/scss/animations/scale' as g-scale;
+@use '../../general/scss/animations/base' as g-animations-base;
 
-@use 'animations/translate' as trn;
-@use 'animations/rotate' as rt;
-@use 'animations/scale' as scl;
-@use 'animations/base' as b;
+@use '../../general/scss/index' as g-index;
+//-----------------//
+
+// Organization Imports //
+@use 'abstracts/colors' as o-colors;
+@use 'abstracts/fonts' as o-fonts;
+
+@use 'components/containers' as o-containers;
+@use 'components/tables' as o-tables;
+
+@use 'animations/translate' as o-translate;
+@use 'animations/rotate' as o-rotate;
+@use 'animations/scale' as o-scale;
+//----------------------//
+
 
 
 :root {
-    --rt-deg: 90deg; 
+    @include g-index.root-base();
 }
 
+
 #div_1 {
-    background: clr.$grey;
+    background: o-colors.$grey;
     position: relative;
     display: block;
     width: 500px;
     height: 400px;
 }
-
 
 
 p {
@@ -36,7 +55,7 @@ table {
 
 
     thead {
-        background: clr.$grey-dark;
+        background: o-colors.$grey-dark;
         color: white;
         
         th {
@@ -48,7 +67,7 @@ table {
         background: inherit;
         color: inherit;
     }
-    @include tbl.table-body(clr.$odd-row, clr.$even-row, clr.$blue);
+    @include g-tables.table-body(o-colors.$odd-row, o-colors.$even-row, o-colors.$blue);
 
     text-align: center;
 }
@@ -58,63 +77,61 @@ table {
 }
 
 tbody tr {
-    border-top: 1px solid clr.$grey-dark;
-    border-bottom: 1px solid clr.$grey-dark;
+    border-top: 1px solid o-colors.$grey-dark;
+    border-bottom: 1px solid o-colors.$grey-dark;
 }
+
+
 .h1 {
-    color: clr.$blue-dark;
-    font-size: map.get(fnt.$size, "lg");
+    color: o-colors.$blue;
+    font-size: map.get(o-fonts.$size, "lg");
 }
 
 .h2, .h3, .h4 {
-    color: clr.$grey-dark;
+    color: o-colors.$grey-dark;
 }
-
-
-
-
 
 
 
 // Rotation animations
 .spinning-left {
-    @include rt.spinning-left();
+    @include g-rotate.spinning-left();
 }
 .spinning-right {
-    @include rt.spinning-right();
+    @include g-rotate.spinning-right();
 }
 
 
 
 .rotate-left-90 {
-    @include rt.rotate-left-90();
+    @include g-rotate.rotate-left-90();
 }
 .rotate-left-180 {
-    @include rt.rotate-left-180();
+    @include g-rotate.rotate-left-180();
 }
 .rotate-left-270 {
-    @include rt.rotate-left-270();
+    @include g-rotate.rotate-left-270();
 }
 .rotate-left-360 {
-    @include rt.rotate-left-360();
+    @include g-rotate.rotate-left-360();
 }
 
 
 
 .rotate-right-90 {
-    @include rt.rotate-right-90();
+    @include g-rotate.rotate-right-90();
 }
 .rotate-right-180 {
-    @include rt.rotate-right-180();
+    @include g-rotate.rotate-right-180();
 }
 .rotate-right-270 {
-    @include rt.rotate-right-270();
+    @include g-rotate.rotate-right-270();
 }
 .rotate-right-360 {
-    @include rt.rotate-right-360();
+    @include g-rotate.rotate-right-360();
 }
 
 // Scale animations
 .pulse-20 {
-    @include scl.pulse-20();
+    @include g-scale.pulse-20();
 }

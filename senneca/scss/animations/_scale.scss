@@ -1,18 +1,1 @@
-@use 'base' as b;
-
-// Pulse
-@include b.keyframes(pulse-20) {
-    0% {
-        scale: 1.0;
-    }
-    50% {
-        scale: 1.2;
-    }
-    100% {
-        rotate: 1.0;
-    }
-}
-
-@mixin pulse-20() {
-    @include b.animate('pulse-20 3s linear infinite');
-}
+@use '../../../general/scss/animations/base' as b;

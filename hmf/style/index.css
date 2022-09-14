@@ -271,8 +271,37 @@
     rotate: 1;
   }
 }
-:root {
-  --rt-deg: 90deg;
+:root :root {
+  --deg-0: 0deg;
+  --deg-1: 0deg;
+  --deg-2: 0deg;
+  --deg-3: 0deg;
+  --deg-4: 0deg;
+  --deg-5: 0deg;
+  --deg-6: 0deg;
+  --deg-7: 0deg;
+  --deg-8: 0deg;
+  --deg-9: 0deg;
+  --x-pos-0: 0px;
+  --x-pos-1: 0px;
+  --x-pos-2: 0px;
+  --x-pos-3: 0px;
+  --x-pos-4: 0px;
+  --x-pos-5: 0px;
+  --x-pos-6: 0px;
+  --x-pos-7: 0px;
+  --x-pos-8: 0px;
+  --x-pos-9: 0px;
+  --y-pos-0: 0px;
+  --y-pos-1: 0px;
+  --y-pos-2: 0px;
+  --y-pos-3: 0px;
+  --y-pos-4: 0px;
+  --y-pos-5: 0px;
+  --y-pos-6: 0px;
+  --y-pos-7: 0px;
+  --y-pos-8: 0px;
+  --y-pos-9: 0px;
 }
 
 #div_1 {
@@ -309,10 +338,10 @@ table tbody tr:nth-child(even) {
   background: #dfe1e6;
 }
 table tbody tr:nth-child(odd).active {
-  background: rgba(218, 98, 109, 0.1) !important;
+  background: rgba(218, 98, 109, 0.1);
 }
 table tbody tr:nth-child(even).active {
-  background: rgba(218, 98, 109, 0.1) !important;
+  background: rgba(218, 98, 109, 0.1);
 }
 table tbody tr:nth-child(odd):hover {
   background: rgba(218, 98, 109, 0.25);

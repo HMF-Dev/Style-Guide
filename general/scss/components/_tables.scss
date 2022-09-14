@@ -18,11 +18,11 @@
 
         //active
         tr:nth-child(odd).active {
-            background: rgba($color-active-row, 0.1) !important;
+            background: rgba($color-active-row, 0.1);
         };
 
         tr:nth-child(even).active {
-            background: rgba($color-active-row, 0.1) !important;
+            background: rgba($color-active-row, 0.1);
         };
 
         tr:nth-child(odd):hover {
