@@ -1,0 +1,9 @@
+@mixin grid-symmetric($class-name, $number-of-columns, $number-of-rows) {
+
+    #{$class-name} {
+        display: grid;
+        grid-template-rows: repeat($number-of-rows, 1fr);
+        grid-template-columns: repeat($number-of-columns, 1fr);
+    };
+
+};

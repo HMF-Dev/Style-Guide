@@ -6,6 +6,7 @@
 @use '../../general/scss/abstracts/colors' as g-colors;
 @use '../../general/scss/abstracts/fonts' as g-fonts;
     // Abstracts
+@use '../../general/scss/components/grid' as g-grid;
 @use '../../general/scss/components/containers' as g-containers;
 @use '../../general/scss/components/tables' as g-tables;
     // Animations
@@ -33,6 +34,19 @@
 
 :root {
     @include g-index.root-base();
+}
+
+
+
+@include g-grid.grid-symmetric('.grid-sym-2x1', 2, 1);
+
+.grid-sym-2x1 {
+    grid-gap: 0px;
+    //overflow: clip;
+}
+
+.card:hover {
+    @extend .pulse-20;
 }
 
 
