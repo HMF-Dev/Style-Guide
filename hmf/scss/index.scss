@@ -1,0 +1,136 @@
+@use "sass:map";
+
+
+// General Imports // 
+    // Abstracts
+@use '../../general/scss/abstracts/colors' as g-colors;
+@use '../../general/scss/abstracts/fonts' as g-fonts;
+    // Abstracts
+@use '../../general/scss/components/containers' as g-containers;
+@use '../../general/scss/components/tables' as g-tables;
+    // Animations
+@use '../../general/scss/animations/translate' as g-translate;
+@use '../../general/scss/animations/rotate' as g-rotate;
+@use '../../general/scss/animations/scale' as g-scale;
+@use '../../general/scss/animations/base' as g-animations-base;
+//-----------------//
+
+// Organization Imports //
+@use 'abstracts/colors' as o-colors;
+@use 'abstracts/fonts' as o-fonts;
+
+@use 'components/containers' as o-containers;
+@use 'components/tables' as o-tables;
+
+@use 'animations/translate' as o-translate;
+@use 'general/scss/animations/rotate' as o-rotate;
+@use 'general/scss/animations/scale' as o-scale;
+@use 'general/scss/animations/base' as o-animations-base;
+//----------------------//
+
+
+
+:root {
+    --rt-deg: 90deg; 
+}
+
+
+#div_1 {
+    background: o-colors.$grey;
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 400px;
+}
+
+
+p {
+    display: block;
+    position: absolute;
+}
+
+
+table {
+
+
+    thead {
+        background: o-colors.$grey-dark;
+        color: white;
+        
+        th {
+            padding: 5px;
+        }
+    }
+
+    input {
+        background: inherit;
+        color: inherit;
+    }
+    @include tbl.table-body(o-colors.$odd-row, o-colors.$even-row, o-colors.$red-light);
+
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody tr {
+    border-top: 1px solid o-colors.$grey-dark;
+    border-bottom: 1px solid o-colors.$grey-dark;
+}
+
+
+.h1 {
+    color: o-colors.$red;
+    font-size: map.get(o-fonts.$size, "lg");
+}
+
+.h2, .h3, .h4 {
+    color: o-colors.$grey-dark;
+}
+
+
+
+// Rotation animations
+.spinning-left {
+    @include g-rotate.spinning-left();
+}
+.spinning-right {
+    @include g-rotate.spinning-right();
+}
+
+
+
+.rotate-left-90 {
+    @include g-rotate.rotate-left-90();
+}
+.rotate-left-180 {
+    @include g-rotate.rotate-left-180();
+}
+.rotate-left-270 {
+    @include g-rotate.rotate-left-270();
+}
+.rotate-left-360 {
+    @include g-rotate.rotate-left-360();
+}
+
+
+
+.rotate-right-90 {
+    @include g-rotate.rotate-right-90();
+}
+.rotate-right-180 {
+    @include g-rotate.rotate-right-180();
+}
+.rotate-right-270 {
+    @include g-rotate.rotate-right-270();
+}
+.rotate-right-360 {
+    @include g-rotate.rotate-right-360();
+}
+
+// Scale animations
+.pulse-20 {
+    @include g-scale.pulse-20();
+}

@@ -1,0 +1,19 @@
+// Senneca color codes
+    //blue
+$red: #c8102e; //rgba(15,143,206,255)
+$red-light: #da626d; //rgba(0,112,186,255)
+    //grey
+$grey-light: #959a9e; //rgba(180,180,182,255)
+$grey: #959a9e; //rgba(94,98,102,255)
+$grey-dark: #42403f; //rgba(45,45,45,255)
+
+// General color
+$odd-row: #dfe1e6;
+$even-row: #b7b7b9;
+
+
+
+// Gradients
+@mixin blue-grad {
+    background: -webkit-linear-gradient(240deg, rgba($red, .60), rgba($grey-light, .8));
+}

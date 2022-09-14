@@ -1,0 +1,139 @@
+@use 'base' as b;
+
+// Infinite leftward rotation
+@include b.keyframes(left-spin) {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: -359.99deg;
+    }
+}
+
+@mixin spinning-left() {
+    @include b.animate('left-spin 5s linear infinite');
+}
+
+
+// Infinite rightward rotation
+@include b.keyframes(right-spin) {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 359.99deg;
+    }
+}
+
+@mixin spinning-right() {
+    @include b.animate('right-spin 5s linear infinite');
+}
+
+
+
+//Left rotations
+    //90deg
+@include b.keyframes(r-l90) {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: -90deg;
+    }
+}
+@mixin rotate-left-90() {
+    @include b.animate('r-l90 2s forwards');
+}
+    //180deg
+@include b.keyframes(r-l180) {
+0% {
+    rotate: 0deg;
+}
+100% {
+    rotate: -180deg;
+}
+}
+@mixin rotate-left-180() {
+@include b.animate('r-l180 2s forwards');
+}
+    //270deg
+@include b.keyframes(r-l270) {
+0% {
+    rotate: 0deg;
+}
+100% {
+    rotate: -270deg;
+}
+}
+@mixin rotate-left-270() {
+@include b.animate('r-l270 2s forwards');
+}
+    //360deg
+@include b.keyframes(r-l360) {
+0% {
+    rotate: 0deg;
+}
+100% {
+    rotate: -360deg;
+}
+}
+@mixin rotate-left-360() {
+@include b.animate('r-l360 2s forwards');
+}
+
+
+
+//Right rotations
+    //90deg
+    @include b.keyframes(r-r90) {
+        0% {
+            rotate: 0deg;
+        }
+        100% {
+            rotate: 90deg;
+        }
+    }
+    @mixin rotate-right-90() {
+        @include b.animate('r-r90 2s forwards');
+    }
+        //180deg
+    @include b.keyframes(r-r180) {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 180deg;
+    }
+    }
+    @mixin rotate-right-180() {
+    @include b.animate('r-r180 2s forwards');
+    }
+        //270deg
+    @include b.keyframes(r-r270) {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 270deg;
+    }
+    }
+    @mixin rotate-right-270() {
+    @include b.animate('r-r270 2s forwards');
+    }
+        //360deg
+    @include b.keyframes(r-r360) {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+    }
+    @mixin rotate-right-360() {
+    @include b.animate('r-r360 2s forwards');
+    }
+
+
+
+
+
