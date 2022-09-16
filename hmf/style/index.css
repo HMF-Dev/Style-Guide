@@ -429,9 +429,9 @@ tbody tr {
 }
 
 .pulse-20 {
-  -moz-animation: pulse-20 3s linear infinite;
-  -webkit-animation: pulse-20 3s linear infinite;
-  animation: pulse-20 3s linear infinite;
+  -moz-animation: pulse-20 3s ease infinite;
+  -webkit-animation: pulse-20 3s ease infinite;
+  animation: pulse-20 3s ease infinite;
 }
 
 /*# sourceMappingURL=index.css.map */

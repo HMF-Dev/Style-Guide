@@ -14,5 +14,5 @@
 }
 
 @mixin pulse-20() {
-    @include b.animate('pulse-20 3s linear infinite');
+    @include b.animate('pulse-20 3s ease infinite');
 }
