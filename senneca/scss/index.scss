@@ -5,40 +5,63 @@
     // Abstracts
 @use '../../general/scss/abstracts/colors' as g-colors;
 @use '../../general/scss/abstracts/fonts' as g-fonts;
-    // Abstracts
+    // Objects
 @use '../../general/scss/components/grid' as g-grid;
 @use '../../general/scss/components/containers' as g-containers;
 @use '../../general/scss/components/tables' as g-tables;
     // Animations
+@use '../../general/scss/animations/complex' as g-complex;
 @use '../../general/scss/animations/translate' as g-translate;
 @use '../../general/scss/animations/rotate' as g-rotate;
 @use '../../general/scss/animations/scale' as g-scale;
 @use '../../general/scss/animations/base' as g-animations-base;
-
+    // Index
 @use '../../general/scss/index' as g-index;
-//-----------------//
+//
+
 
 // Organization Imports //
+    // Abstracts
 @use 'abstracts/colors' as o-colors;
 @use 'abstracts/fonts' as o-fonts;
-
+    // Objects
 @use 'components/containers' as o-containers;
 @use 'components/tables' as o-tables;
-
+    // Animations
 @use 'animations/translate' as o-translate;
 @use 'animations/rotate' as o-rotate;
 @use 'animations/scale' as o-scale;
-//----------------------//
+//
+
+//----------------------------------------//
 
 
+// :root css variables
+@include g-index.root-base();
+//
 
-:root {
-    @include g-index.root-base();
+
+// All Grids
+    // Symmetric Grids
+@include g-grid.grid-symmetric('.grid-sym-2x1', 2, 1);
+    // Custom Grids
+//
+
+
+h2:hover, h3:hover, h4:hover {
+    @include g-complex.shift-shrink-right(30px);
 }
 
 
 
-@include g-grid.grid-symmetric('.grid-sym-2x1', 2, 1);
+.test2:hover {
+    animation: t1 20s ease forwards;
+}
+
+$stp: 0%, 20%, 100%;
+$anm: translate(0px, 0px), translate3d(300px, 50%, 3em) scaleX(4) rotateX(360deg) rotateY(360deg), translate(300px, 200px) scaleX(0) rotateX(360deg) rotateY(360deg);
+@include g-animations-base.multi-part("t1", $stp, $anm);
+
 
 .grid-sym-2x1 {
     grid-gap: 0px;
@@ -56,6 +79,32 @@
     display: block;
     width: 500px;
     height: 400px;
+}
+
+.loader{
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 6px solid transparent;
+    border-top: 6px solid o-colors.$blue; 
+    border-bottom: 6px solid o-colors.$blue; 
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    div {
+        display: block;
+        position: absolute;
+        left: 56px;
+        right: 56px;
+        transform: translate(50%, -50%);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 6px solid transparent;
+        border-left: 6px solid transparent /*o-colors.$blue*/; 
+        border-right: 6px solid transparent /*o-colors.$blue*/; 
+    }
 }
 
 
@@ -96,14 +145,21 @@ tbody tr {
 }
 
 
+
+
+
 .h1 {
     color: o-colors.$blue;
     font-size: map.get(o-fonts.$size, "lg");
+    @include g-fonts.grad-main(280deg, o-colors.$blue, o-colors.$grey-light); 
 }
 
 .h2, .h3, .h4 {
     color: o-colors.$grey-dark;
+    max-width: 150px; 
 }
+
+
 
 
 

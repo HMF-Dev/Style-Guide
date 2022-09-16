@@ -32,9 +32,9 @@
 
 
 
-:root {
-    @include g-index.root-base();
-}
+
+@include g-index.root-base();
+
 
 
 #div_1 {
@@ -83,12 +83,14 @@ tbody tr {
 }
 
 
-.h1 {
+
+h1 {
     color: o-colors.$red;
-    font-size: map.get(o-fonts.$size, "lg");
+    font-size: map.get(g-fonts.$size, "xl");
 }
 
-.h2, .h3, .h4 {
+
+h2, h3, h4 {
     color: o-colors.$grey-dark;
 }
 

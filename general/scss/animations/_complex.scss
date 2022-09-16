@@ -1,0 +1,11 @@
+@use 'base' as b;
+
+@mixin shift-shrink-right($distance) {
+
+    animation: ssr 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+
+    $frames: 0%, 100%;
+    $actions: translateX(0px) scaleX(1), translateX($distance) scaleX(.9);
+    @include b.multi-part("ssr", $frames, $actions)
+    
+}

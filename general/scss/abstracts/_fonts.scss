@@ -1,3 +1,10 @@
+// Text Gradient
+@mixin grad-main($deg, $primary-color, $secondary-color) {
+    background: -webkit-linear-gradient($deg, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+};
+
 // Font size
 $size: (
     "xl": 60px,
@@ -14,8 +21,4 @@ $weight: (
 );
 
 
-
-// Fonts
-
-
-
+// Font Families

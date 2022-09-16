@@ -271,7 +271,7 @@
     rotate: 1;
   }
 }
-:root :root {
+:root {
   --deg-0: 0deg;
   --deg-1: 0deg;
   --deg-2: 0deg;
@@ -359,12 +359,12 @@ tbody tr {
   border-bottom: 1px solid #42403f;
 }
 
-.h1 {
+h1 {
   color: #c8102e;
-  font-size: 50px;
+  font-size: 60px;
 }
 
-.h2, .h3, .h4 {
+h2, h3, h4 {
   color: #42403f;
 }
 

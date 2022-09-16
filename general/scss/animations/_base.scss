@@ -16,3 +16,16 @@
     -webkit-animation: #{$str};
     animation: #{$str};
 }
+
+@mixin multi-part($name, $steps, $animations) {
+    @include keyframes($name) {
+        @for $i from 1 through length($steps) {
+            $step: nth($steps, $i);
+            $animation: nth($animations, $i);
+
+            #{$step} {
+                transform: $animation;
+            }
+        }
+    }
+}
