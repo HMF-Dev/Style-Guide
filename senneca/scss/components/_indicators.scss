@@ -1,0 +1,16 @@
+@use '../../../general/scss/components/indicators' as g-indicators;
+
+@use '../abstracts/colors' as o-colors;
+
+@mixin loader-xl() {
+    @include g-indicators.loader-spin-2x('.loader-xl', 30rem, o-colors.$blue, o-colors.$grey-dark);
+
+    .loader-xl {
+        @extend .spinning-right;
+        div {
+            @extend .spinning-right;
+        }
+    };  
+
+}
+

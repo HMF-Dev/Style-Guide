@@ -26,6 +26,7 @@
 @use 'abstracts/colors' as o-colors;
 @use 'abstracts/fonts' as o-fonts;
     // Objects
+@use 'components/indicators' as o-indicators;
 @use 'components/containers' as o-containers;
 @use 'components/tables' as o-tables;
     // Animations
@@ -83,14 +84,13 @@ $anm: translate(0px, 0px), translate3d(300px, 50%, 3em) scaleX(4) rotateX(360deg
 }
 
 
-@include g-indicators.loader-spin-2x('.loader', 6rem, rgba(0, 128, 0, 0.5), rgba(48, 53, 51, 0.5));
+@include o-indicators.loader-xl;
 
-.loader {
-    @extend .spinning-right;
-    div {
-        @extend .spinning-right;
-    }
-};
+.loader-xl {
+    opacity: 0.5;
+}
+
+
 
 /*
 .loader {

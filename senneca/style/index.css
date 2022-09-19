@@ -387,24 +387,28 @@ h2:hover, h3:hover, h4:hover {
   height: 400px;
 }
 
-.loader {
+.loader-xl {
   display: flex;
-  width: 12rem;
-  height: 12rem;
-  border: 1.2rem solid transparent;
-  border-top: 1.2rem solid rgba(0, 128, 0, 0.5);
-  border-bottom: 1.2rem solid rgba(0, 128, 0, 0.5);
+  width: 60rem;
+  height: 60rem;
+  border: 6rem solid transparent;
+  border-top: 6rem solid #0f8fce;
+  border-bottom: 6rem solid #0f8fce;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
 }
-.loader div {
+.loader-xl div {
   border-radius: 50%;
-  width: 7.5rem;
-  height: 7.5rem;
-  border: 1.5rem solid transparent;
-  border-left: 1.5rem solid rgba(48, 53, 51, 0.5);
-  border-right: 1.5rem solid rgba(48, 53, 51, 0.5);
+  width: 37.5rem;
+  height: 37.5rem;
+  border: 7.5rem solid transparent;
+  border-left: 7.5rem solid #2d2d2d;
+  border-right: 7.5rem solid #2d2d2d;
+}
+
+.loader-xl {
+  opacity: 0.5;
 }
 
 /*
@@ -497,7 +501,7 @@ tbody tr {
   animation: left-spin 5s linear infinite;
 }
 
-.spinning-right, .loader, .loader div {
+.spinning-right, .loader-xl, .loader-xl div {
   -moz-animation: right-spin 5s linear infinite;
   -webkit-animation: right-spin 5s linear infinite;
   animation: right-spin 5s linear infinite;
