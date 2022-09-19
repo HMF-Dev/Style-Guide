@@ -1,0 +1,24 @@
+@use '../animations/rotate' as rotate;
+
+
+@mixin loader-spin-2x($name, $radius, $outer-color, $inner-color) {
+    #{$name} {
+        display: flex;
+        width: $radius*2;
+        height: $radius*2;
+        border: calc($radius / 5) solid transparent;
+        border-top: calc($radius / 5) solid $outer-color; 
+        border-bottom: calc($radius / 5) solid $outer-color; 
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        div {
+            border-radius: 50%;
+            width: $radius*1.25;
+            height: $radius*1.25;
+            border: calc(($radius * 1.25) / 5) solid transparent;
+            border-left: calc(($radius * 1.25) / 5) solid $inner-color; 
+            border-right: calc(($radius * 1.25) / 5) solid $inner-color;
+        }
+    }
+}
