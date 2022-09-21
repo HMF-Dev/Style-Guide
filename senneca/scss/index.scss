@@ -6,6 +6,8 @@
 @use "../../general/scss/abstracts/fonts" as g-fonts;
 // Objects
 @use "../../general/scss/components/grids" as g-grids;
+@use "../../general/scss/components/selectors" as g-selectors;
+@use "../../general/scss/components/nav" as g-nav;
 @use "../../general/scss/components/indicators" as g-indicators;
 @use "../../general/scss/components/containers" as g-containers;
 @use "../../general/scss/components/tables" as g-tables;
@@ -44,6 +46,9 @@
 @include g-grids.grid-symmetric(".grid-sym-2x1", 2, 2);
 // Custom Grids
 //
+
+// Navbar
+@include g-nav.nav-bar-horizontal('#main-nav', 75px, 30px, o-colors.$grey, white, black);
 
 h2:hover,
 h3:hover,
@@ -185,12 +190,17 @@ tbody tr {
   @include g-colors.shadow-main;
 }
 
-.button {
-  @include g-colors.shadow-convex;
+button {
+  //@include g-colors.shadow-convex;
+  width: 100px;
+  height: 50px;
+  border-radius: 15%;
+  background: linear-gradient(to bottom, rgba(o-colors.$blue, 0.5), rgba(o-colors.$blue-dark, 0.5));
 }
 
-.button:active {
-  @include g-colors.shadow-concave;
+button:active {
+  //@include g-colors.shadow-concave;
+  background: linear-gradient(to top, rgba(o-colors.$blue, 0.5), rgba(o-colors.$blue-dark, 0.5));
 }
 
 // Rotation animations
