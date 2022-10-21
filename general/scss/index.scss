@@ -1,3 +1,7 @@
+@import "./abstracts/abstracts-dir";
+@import "./components/components-dir";
+@import "./animations/animations-dir";
+
 @mixin root-base() {
   :root {
     // Alterable Angles
@@ -37,7 +41,3 @@
     --y-pos-9: 0px;
   }
 }
-
-@import "./abstracts/abstracts-dir";
-@import "./animations/animations-dir";
-@import "./components/components-dir";
