@@ -2,16 +2,11 @@
 }
 
 @mixin flyout-menu {
-  float: left;
-  margin: 5px 10px;
-
-  ul {
-    min-width: fit-content;
-    max-width: 120px;
-    padding: 0; //padding and margin 0 needed to prevent gap between main ul and flyout ul
-    margin: 0;
-    background-color: #fff;
-  }
+  min-width: fit-content;
+  max-width: 120px;
+  padding: 0; //padding and margin 0 needed to prevent gap between main ul and flyout ul
+  margin: 0;
+  background-color: #fff;
 
   li {
     position: relative;
@@ -53,6 +48,6 @@
   }
 }
 
-nav {
+nav ul {
   @include flyout-menu-vertical();
 }
