@@ -1,44 +1,55 @@
 @mixin flyout-menu-vertical {
-  nav {
-    margin: 10px;
+  float: left;
+  margin: 5px 10px;
 
-    li {
-      position: relative;
+  ul {
+    min-width: fit-content;
+    max-width: 120px;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+  }
+
+  li {
+    position: relative;
+    display: block;
+    border: 1px solid #000;
+    border-top: 0px;
+
+    a {
       display: block;
-      border: 1px solid #000;
-      border-top: 0px;
-
-      a {
-        display: block;
-        padding: 3px;
-        text-decoration: none;
-        color: #009;
-      }
-
-      a:hover {
-        background-color: #009;
-        color: #fff;
-      }
-
-      ul {
-        position: absolute;
-        width: 150px;
-        left: 118px;
-        top: 5px;
-        display: none;
-
-        li {
-          font-size: smaller;
-        }
-      }
+      padding: 5px;
+      text-decoration: none;
+      color: #009;
     }
 
-    li:hover ul {
-      display: block;
+    a:hover {
+      background-color: #009;
+      color: #fff;
     }
 
-    li:first-child {
-      border-top: 1px solid #000;
+    ul {
+      position: absolute;
+      width: 100%;
+      left: 100%;
+      top: 5px;
+      display: none;
+
+      li {
+        font-size: smaller;
+      }
     }
   }
+
+  li:hover ul {
+    display: block;
+  }
+
+  li:first-child {
+    border-top: 1px solid #000;
+  }
+}
+
+nav {
+  @include flyout-menu-vertical();
 }
