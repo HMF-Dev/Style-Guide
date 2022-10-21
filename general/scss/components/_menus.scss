@@ -1,11 +1,14 @@
-@mixin flyout-menu-vertical {
+@mixin dropdown-menu {
+}
+
+@mixin flyout-menu {
   float: left;
   margin: 5px 10px;
 
   ul {
     min-width: fit-content;
     max-width: 120px;
-    padding: 0;
+    padding: 0; //padding and margin 0 needed to prevent gap between main ul and flyout ul
     margin: 0;
     background-color: #fff;
   }
@@ -30,9 +33,9 @@
 
     ul {
       position: absolute;
-      width: 100%;
       left: 100%;
       top: 5px;
+      width: 100%;
       display: none;
 
       li {
