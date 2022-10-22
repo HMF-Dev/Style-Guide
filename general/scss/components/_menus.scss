@@ -1,7 +1,90 @@
-@mixin dropdown-menu {
+@mixin horizontal-nav($id) {
+  //applies to <ul>
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  ul li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    a {
+      color: #f6f7f8;
+      background: #750000;
+      height: 64px;
+      font-family: lato;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background 0.4s;
+    }
+
+    a:hover {
+      background: #844141;
+    }
+
+    ul li:not(li > ul > li > ul > li:nth-of-type(1)) {
+      margin-top: 2px;
+    }
+
+    &:has(> ul.submenu) > a {
+      &:after {
+        content: "\25bc";
+        padding-left: 0.5em;
+        font-size: smaller;
+      }
+    }
+
+    &:has(> ul.submenu-2) > a {
+      &:after {
+        content: "\25b6";
+        padding-left: 0.5em;
+        font-size: smaller;
+      }
+    }
+  }
+
+  ul.submenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+
+  ul.submenu-2 {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    left: 100%;
+    width: 120px;
+
+    li {
+      margin-left: 2px;
+    }
+  }
+
+  li:hover ul.submenu {
+    display: flex;
+  }
+
+  ul.submenu li:hover ul.submenu-2 {
+    display: flex;
+  }
 }
 
 @mixin flyout-menu {
+  //applies to <ul>
   min-width: fit-content;
   max-width: 120px;
   padding: 0; //padding and margin 0 needed to prevent gap between main ul and flyout ul
@@ -48,6 +131,6 @@
   }
 }
 
-nav ul {
-  @include flyout-menu-vertical();
+#main-nav {
+  @include horizontal-nav("main-nav");
 }

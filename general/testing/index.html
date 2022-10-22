@@ -1,90 +1,110 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Senneca Style Test</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../style/index.css">
-    </head>
-    <body >
-      <nav>
-        <ul id="mainMenu">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="services.html">Services</a>
-            <ul>
-              <li><a href="service1.html">Service 1</a></li>
-              <li><a href="service2.html">Service 2</a></li>
-              <li><a href="service3.html">Service 3</a></li>
-            </ul>
-          </li>
-          <li><a href="products.html">Products</a>
-            <ul>
-              <li><a href="product1.html">Product 1</a></li>
-              <li><a href="product2.html">Product 2</a></li>
-              <li><a href="product3.html">Product 3</a></li>
-            </ul>
-          </li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About</a>
-            <ul>
-              <li><a href="history.html">Company History</a></li>
-              <li><a href="staff.html">Our Staff</a></li>
-              <li><a href="press.html">Press Releases</a></li>
-              <li><a href="investorInfo.html">Investor Information</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
 
-        <!--<div id="div_1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Senneca Style Test</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body>
+  <nav id="main-nav">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="services.html">Services</a>
+        <ul class="submenu">
+          <li><a href="service1.html">Service 1</a></li>
+          <li><a href="service2.html">Service 2</a></li>
+          <li><a href="service3.html">Service 3</a></li>
+        </ul>
+      </li>
+      <li><a href="products.html">Products</a>
+        <ul class="submenu">
+          <li><a href="product1.html">Product 1</a>
+            <ul class="submenu-2">
+              <li><a href="#">Photos</a></li>
+              <li><a href="#">Specification</a></li>
+            </ul>
+          </li>
+          <li><a href="product2.html">Product 2</a>
+            <ul class="submenu-2">
+              <li><a href="#">Pics</a></li>
+              <li><a href="#">Specs</a></li>
+            </ul>
+          </li>
+          <li><a href="product3.html">Product 3</a>
+            <ul class="submenu-2">
+              <li><a href="#">Spics</a></li>
+              <li><a href="#">Fecks</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a>
+        <ul class="submenu">
+          <li><a href="history.html">Company History</a></li>
+          <li><a href="staff.html">Our Staff</a></li>
+          <li><a href="press.html">Press Releases</a></li>
+          <li><a href="investorInfo.html">Investor Information</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!--<div id="div_1">
             <p class="spinning-left">mvklv</p>
         </div>-->
-        <div>
-            <h1 class="h1">H1 Header</h1>
-            <h2 class="h2">H2 Header</h2>
-            <h3 class="h3">H3 Header</h3>
-            <h4 class="h4">H4 Header</h4>
+  <div>
+    <h1 class="h1">H1 Header</h1>
+    <h2 class="h2">H2 Header</h2>
+    <h3 class="h3">H3 Header</h3>
+    <h4 class="h4">H4 Header</h4>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Example 1</th>
-                        <th>Example 2</th>
-                        <th>Example 3</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text"> </input></td>
-                        <td class="spinning-right">2</td>
-                        <td class="spinning-left">3</td>
-                    </tr>
-                    <tr>
-                        <td class="rotate-right-270">1</td>
-                        <td class="pulse-20"> <div class="spinning-left">2</div></td>
-                        <td class="spinning-left">3</td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"/></td>
-                        <td>2</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Example 1</th>
+          <th>Example 2</th>
+          <th>Example 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text"> </input></td>
+          <td class="spinning-right">2</td>
+          <td class="spinning-left">3</td>
+        </tr>
+        <tr>
+          <td class="rotate-right-270">1</td>
+          <td class="pulse-20">
+            <div class="spinning-left">2</div>
+          </td>
+          <td class="spinning-left">3</td>
+        </tr>
+        <tr>
+          <td><input type="text" /></td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
-        
-        <script src="" async defer></script>
-    </body>
+
+  <script src="" async defer></script>
+</body>
+
 </html>
